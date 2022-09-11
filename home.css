@@ -1,0 +1,206 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.slider{
+    width: 100%;
+    height: 100vh;
+    position: absolute; 
+}
+.slider img{
+    height: 100vh;
+    width: 100vw;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    position: absolute;
+    top: 0px;
+}
+.box1{
+    margin: 10% 30%;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+.bts{
+    display: flex;
+    justify-content: space-around;
+}
+button{
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    background-color: rgb(176, 140, 73);
+    color: white;
+    border-color:orange;
+    margin: 2px;
+}
+button:hover{
+    border: 1px solid white;
+    background-color:transparent;
+
+}
+/* @import url("@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Ubuntu:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Ubuntu&family=Varela+Round&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    /* background-color: rgb(52, 50, 50); */
+    color: rgb(199, 194, 194);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+}
+.title{
+    font-size: 1.5rem;
+    margin: .5rem;
+    font-family: 'Varela Round', sans-serif;
+}
+.navbar-link ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+ 
+}
+.navbar-link ul li{
+    list-style: none;
+    /* margin: 5px 15px; */
+    font-size: 1.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+.navbar-link ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+.navbar-link ul li a:hover{
+    background-color: #555;
+}
+.toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    margin-top: 3px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+@media (max-width:687px){
+
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-link{
+        display: none;  
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .navbar-link ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    /* .navbar-link ul li a:hover{
+        background-color: #555;
+        width: 100%;
+
+    } */
+    .navbar-link li{
+        text-align: center;
+    }
+    .navbar-link.active{
+        display:flex;
+    }
+}
+.cont{width: 100vw;}
+.logocontainer{
+    display: flex;
+    flex-direction: row;
+    place-content: space-around;
+    padding: 10px 10px;
+
+}
+.src{
+    height: 250px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    border-radius: 250px;
+  }
+  .box{
+    padding-bottom: 20px;
+  
+  }
+  .box:hover{
+    box-shadow:3px 3px 15px black;
+    border-radius: 250px;
+  }
+
+  .caption{
+    text-align: center;
+    color: black;
+    text-decoration-style: underline;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.6rem;
+  }
+  .caption:hover{
+    color: blue;
+    font-style: inherit;
+  }
+  
+.footer{
+    background-color: lightgray;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.twitter{
+    font-size: 40px;
+    margin: 5px;
+}
+.fb{
+    font-size: 40px;
+    margin: 5px;
+}
+.insta{
+    font-size:40px ;
+    margin: 5px;
+}
+.git{
+    font-size: 40px;
+    margin: 5px;
+}

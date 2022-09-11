@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Oxygen:wght@300&family=Poppins:ital,wght@0,200;0,300;0,400;1,300&family=Source+Sans+Pro:wght@300&family=Ubuntu&family=Ubuntu+Condensed&family=Varela+Round&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("./images/food.jpg");
+    opacity: .8;
+}
+
+.contain{
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    margin: 20px 30rem;
+    font-family: 'Poppins', sans-serif;
+}
+.heading h1{
+    color: white;
+    font-size: 8rem;
+}
+.navbar{
+    background-color: rgb(114 114 114);;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+}
+.title{
+    font-size: 1.5rem;
+    margin: .5rem;
+    font-family: 'Varela Round', sans-serif;
+}
+.navbar-link ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+ 
+}
+.navbar-link ul li{
+    list-style: none;
+    /* margin: 5px 15px; */
+    font-size: 1.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+.navbar-link ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+.navbar-link ul li a:hover{
+    background-color: #555;
+}
+.toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    margin-top: 3px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width:687px){
+
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-link{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .navbar-link ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    /* .navbar-link ul li a:hover{
+        background-color: #555;
+        width: 100%;
+
+    } */
+    .navbar-link li{
+        text-align: center;
+    }
+    .navbar-link.active{
+        display:flex;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .info{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.accordion{
+    /* background-color: rgb(36, 83, 124); */
+    position: absolute;
+    top: 20rem;
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.box{
+    position: relative;
+    /* position: absolute; */
+    width: 50%;
+    padding: 10px;
+}
+.label{
+    background-color:rgb(217 244 216);;
+    border-radius: 5px;
+    padding: .6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.box .content{
+    position: relative;
+    background-color: white;
+    height: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    transition-duration: .6s;
+    border-radius: 0 0 10px 10px;
+}
+
+.box .label::before{
+    content: "+";
+    position: absolute;
+    left: 90%;
+    transform: translateY(-50% -60%);
+    transform: scale(1.5);
+    font-weight: 800;
+} 
+.box.active .label::before{
+    content: "-";
+}
+.box.active .content{
+    height: auto;
+    transition-duration: .6s;
+}
+.content{
+    display: flex;
+}
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left:15px;
+    font-family: 'Poppins', sans-serif;
+}
+.imag{
+    width: 100%;
+    /* height: 0%; */
+}
+.imag img{
+    width: 100%;
+    border-radius: 10px;
+    margin:5px;
+    height: 90%;
+}
+.rating{
+    display: flex;
+}
+.rating button{
+    margin-top:8px;
+    margin-left: 2px;
+    background-color: rgba(0, 255, 0,0.5)	;
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+    height: 1.5rem;
+}
+.viewbtn{
+    margin: .7rem 10rem;
+}
+.vbtn{
+    background-color: transparent;
+    border-radius: 5px;  
+    width: 5rem;
+    height: 2rem;
+}
+.footer{
+    margin-top: 80rem;
+    /* background-color: #e5e5e5; */
+   /* width: 100%; */
+   display: flex;
+   color: white;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+}
+.twitter{
+   font-size: 40px;
+   margin: 5px;
+}
+.fb{
+   font-size: 40px;
+   margin: 5px;
+}
+.insta{
+   font-size:40px ;
+   margin: 5px;
+}
+.git{
+   font-size: 40px;
+   margin: 5px;
+}

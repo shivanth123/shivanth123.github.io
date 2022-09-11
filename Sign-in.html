@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Sign-in</title>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'><link rel="stylesheet" href="./Sign-in.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+	<!-- partial:index.partial.html -->
+	<div class="container">
+		<div class="screen">
+			<div class="screen__content">
+				<form name="sign-in-sheet" class="login">
+					<div id="form_alerts"></div>
+					<div class="login__field">
+						<i class="login__icon fas fa-user"></i>
+						<input type="text" name="fname" class="login__input" placeholder="First Name" >
+					</div>
+					<div class="login__field">
+						<i class="login__icon fas fa-user"></i>
+						<input type="text" name="lname" class="login__input" placeholder="Last Name" >
+					</div>
+					<div class="login__field">
+						<i class="login__icon fas fa-user"></i>
+						<input type="text" name="lname" class="login__input" placeholder="Email" >
+					</div>
+					<div class="login__field">
+						<i class="login__icon fas fa-user"></i>
+						<input type="tel" name="mobile" class="login__input" placeholder="Mobile Number">
+					</div>
+					<div class="login__field">
+						<i class="login__icon fas fa-lock"></i>
+						<input type="password" name="password" class="login__input" placeholder="Password" >
+					</div>
+				<div class="buttons">
+					
+					<a href="../index - Copy.html"><button type="submit" class="button login__submit" id="link">
+						<span class="button__text" >Sign Up</span>
+						<i class="button__icon fas fa-chevron-right"></i>
+					</button></a>
+				</div>
+			</form>
+				
+				<div class="social-login">
+					<br>
+					<h3>Log in via</h3>
+					<div class="social-icons">
+						<a href="#" class="social-login__icon fab fa-instagram"></a>
+						<a href="#" class="social-login__icon fab fa-facebook"></a>
+						<a href="#" class="social-login__icon fab fa-twitter"></a>
+					</div>
+				</div>
+			</div>
+			<div class="screen__background">
+				<span class="screen__background__shape screen__background__shape4"></span>
+				<span class="screen__background__shape screen__background__shape3"></span>		
+				<span class="screen__background__shape screen__background__shape2"></span>
+				<span class="screen__background__shape screen__background__shape1"></span>
+			</div>		
+		</div>
+	</div> 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+	<script>
+		
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbxFkswGKQ1UjSYfF-qSXfrND60EzTJNHD6oqMKoGGe-Kxhij7FxR6brMXZVCzzNE6U/exec'
+		const form = document.forms['sign-in-sheet']
+  
+		form.addEventListener('submit', e => {
+		e.preventDefault()
+		  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+		.then(response => $("#form_alerts").html("<div class='success'>Details submitted successfully.</div>"))
+		.catch(error => console.error('Error!', error.message))
+	})
+
+	</script> 
+</body>
+</html>
