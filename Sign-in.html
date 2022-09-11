@@ -36,7 +36,7 @@
 					</div>
 				<div class="buttons">
 					
-					<a href="../index - Copy.html"><button type="submit" class="button login__submit" id="link">
+					<a href="../index - Copy.html"><button type="submit" class="button login__submit" onclick="redirect_Page()">
 						<span class="button__text" >Sign Up</span>
 						<i class="button__icon fas fa-chevron-right"></i>
 					</button></a>
@@ -73,6 +73,12 @@
 		  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 		.then(response => $("#form_alerts").html("<div class='success'>Details submitted successfully.</div>"))
 		.catch(error => console.error('Error!', error.message))
+		let redirect_Page = () => {
+        	let tID = setTimeout(function () {
+            window.location.href = "https://www.encodedna.com/javascript/operators/default.htm";
+            window.clearTimeout(tID);		// clear time out.
+        }, 5000);
+    }
 	})
 
 	</script> 
