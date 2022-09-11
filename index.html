@@ -4,29 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Public Service</title>
-    <link rel="stylesheet" href="./index.css">
-</head>
-<body>
-    
-    <nav class="navbar">
-        <div class="title">
-            <h1>Public Services</h1>
-        </div>
-        <div class="hamburger toggle-button" >
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <div class="navbar-link">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-    <script src="./index.js"></script>
+</head>
+<body onload="slider()">
+
+    <div class="banner">
+        <div class="slider">
+            <img src="./img1.jpg" class="slideimg" alt="Picture">
+        </div>
+        <div class="overlay">
+            <nav class="navbar" id="navy">
+                <div class="title">
+                    <h1>Guide2HYD</h1>
+                </div>
+                <div class="hamburger toggle-button" >
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <div class="navbar-link">
+                    <ul>
+                        <li><a href="#navy">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#foot">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="box1">
+                <h1>Explore Hyderabad </h1>
+                <br>
+                <h3>A Complete Hub for Everything.It's a Map where Compass points...</h3>
+                <br>
+                <div class="bts">
+                    <a href="./Login.html"><button>Login</button>></a>
+                    <a href="./Sign-in.html"><button>SignUp</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cont" id="features">
+        <div class="logocontainer">
+            <div class="box"><a href="./Toursim.html" ><img src="./images/tourism.jpg" alt="Tourism" class="src"><figcaption class="caption">Tourism</figcaption></a></div>
+            <div class="box"><a href="./hospital.html"><img src="./images/hospital.jpg" alt="Hospitals" class="src"><figcaption class="caption">Hospitals</figcaption></a></div>
+            <div class="box"><a href="./collages.html"><img src="./images/Education.jpg" alt="Education" class="src"><figcaption class="caption">Education</figcaption></a></div>
+        </div>
+        <div class="logocontainer">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"><a href="./restaurant.html"><img src="./images/hotel.jpg" alt="Hotels" class="src"><figcaption class="caption">Hotels</figcaption></a></div> 
+            <div class="box"><a href="./Firestations.html"><img src="./images/firestation.jpg" alt="Firestations" class="src"><figcaption class="caption">Firestations</figcaption></a></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <div class="footer" id="foot">
+        <h1>Contact Us</h1>
+        <br>
+        <div class="icons">
+           <a href="#"><i class="fa-brands fa-twitter twitter"></i></a> 
+           <a href="#"><i class="fa-brands fa-facebook fb"></i></a> 
+            <a href="#"><i class="fa-brands fa-instagram insta"></i></a>
+            <a href="https://github.com/shivareddy42"><i class="fa-brands fa-github git"></i></a>
+        </div>
+        <br>
+        <h4><i class="fa-regular fa-copyright copy"></i>Copyright 2022 Team18</h4>
+    </div>
+    
+    <script src="./home.js"></script>
 </body>
 </html>
